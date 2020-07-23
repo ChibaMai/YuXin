@@ -29,8 +29,12 @@ favicon:
   android_manifest: /manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
+# baidu Google
+google_site_verification: poCJ6rmCcq55UJQFUAkhQnVwjIyJHAJFJz2MWyRaeiI
+baidu_site_verification: Ev8jC53f5M
+
 # Set default keywords (Use a comma to separate)
-keywords: "Hi语心,个人博客,"
+keywords: "Hi语心,个人博客,前端萌新,开源,个人,语心,YuXin,Thomasvader,Thomas vader, 莲熙儿,千叶麻衣,千叶"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -46,7 +50,7 @@ rss:
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
-canonical: true
+canonical: false
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
 seo: false
@@ -792,13 +796,13 @@ footer:
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   # custom_text: 托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://www.upyun.com/" target="_blank" rel="nofollow">又拍云</a> 提供 CDN 服务. <a href="http://www.google.com/analytics/" target="_blank" rel="nofollow">Google Analytics </a>提供网站统计服务. <a href="https://www.cloudxns.net/" target="_blank" rel="nofollow">CloudXNS </a>提供 DNS 解析服务.
