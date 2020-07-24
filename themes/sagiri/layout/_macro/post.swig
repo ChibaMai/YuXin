@@ -210,6 +210,7 @@
             {% endif %}
           {% endif %}
 
+          <!-- 
           {# LeanCould PageView #}
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
@@ -224,6 +225,7 @@
                  <span class="post-meta-item-text">人看爆</span>
              </span>
           {% endif %}
+          -->
 
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}
             <span class="post-meta-divider">•</span>

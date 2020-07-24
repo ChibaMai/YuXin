@@ -126,7 +126,7 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: https://cdn.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/DIYgod.jpg
+avatar: /images/YuXin.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -778,7 +778,7 @@ css: css
 js: js
 images: images
 
-header_bg: https://cdn.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/header-gyx.png
+header_bg: /images/YuXinHanFu.jpg
 
 card:
   avatar: https://cdn.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/card.jpg
