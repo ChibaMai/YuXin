@@ -58,7 +58,7 @@
     {% endif %}
 
     <canvas id="evanyou"></canvas>
-    <!-- <div id="aplayer-fixed"></div> -->
+    <div id="aplayer-fixed"></div>
 
     {% if theme.needmoreshare2.enable and theme.needmoreshare2.float.enable %}
       <div id="needsharebutton-float">
@@ -80,7 +80,7 @@
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
 
-  <!--<script>
+  <script>
     // remove service worker cache
     // from https://stackoverflow.com/questions/33704791/how-do-i-uninstall-a-service-worker
     "use strict";
@@ -92,7 +92,7 @@
             }
         })
     }
-  </script>-->
+  </script>
 
   <script>
     if ('serviceWorker' in navigator) {

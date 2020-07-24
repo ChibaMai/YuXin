@@ -1,6 +1,6 @@
 const apFixed = new APlayer({
   element: document.getElementById('aplayer-fixed'),
-  mutex: true,
+  mutex: false,
   theme: '#97dffd',
   order: 'random',
   lrcType: 3,

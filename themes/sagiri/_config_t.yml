@@ -50,7 +50,7 @@ rss:
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
-canonical: true
+canonical: false
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
 seo: false
@@ -83,7 +83,6 @@ commonweal: /404/ || heartbeat
 # Enable/Disable menu icons.
 menu_icons:
   enable: true
-
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -121,7 +120,6 @@ links_icon: link
 links_title: Links
 links_layout: block
 #links_layout: inline
-links:
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -163,10 +161,10 @@ sidebar:
   offset: 52
 
   # Back to top in sidebar (only for Pisces | Gemini).
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -234,7 +232,7 @@ post_copyright:
 mobile_layout_economy: false
 
 # Android Chrome header panel color ($black-deep).
-android_chrome_color: "#fff"
+android_chrome_color: "#e91e63"
 
 # Custom Logo.
 # !!Only available for Default Scheme currently.
@@ -451,7 +449,7 @@ google_analytics: UA-48084758-7
 #yandex_site_verification:
 
 # CNZZ count
-#cnzz_siteid:
+# cnzz_siteid:
 
 # Application Insights
 # See https://azure.microsoft.com/en-us/services/application-insights/
@@ -578,7 +576,7 @@ local_search:
 
 
 # ---------------------------------------------------------------
-# Tags Settings
+# Tags Settings 
 # ---------------------------------------------------------------
 
 # External URL with BASE64 encrypt & decrypt.
@@ -640,7 +638,7 @@ motion:
 fancybox: false
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -778,7 +776,8 @@ css: css
 js: js
 images: images
 
-header_bg: https://cdn.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/header-gyx.png
+# header_bg: https://cdn.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/header-gyx.png
+header_bg: /images/YuXinHanFu.jpg
 
 card:
   avatar: https://cdn.jsdelivr.net/gh/DIYgod/diygod.me@gh-pages/images/card.jpg
@@ -797,13 +796,13 @@ footer:
   copyright:
   # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
-  powered: true
+  powered: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   # custom_text: 托管于<a href="https://github.com/" target="_blank" rel="nofollow"> GitHub</a>. <a href="https://www.upyun.com/" target="_blank" rel="nofollow">又拍云</a> 提供 CDN 服务. <a href="http://www.google.com/analytics/" target="_blank" rel="nofollow">Google Analytics </a>提供网站统计服务. <a href="https://www.cloudxns.net/" target="_blank" rel="nofollow">CloudXNS </a>提供 DNS 解析服务.
