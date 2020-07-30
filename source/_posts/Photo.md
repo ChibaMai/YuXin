@@ -12,6 +12,7 @@ peramlink: 3
 我的相册，这里是我个人相册存储的地方
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="http://www.jq22.com/demo/tuupola-jquery_lazyload/jquery.lazyload.js?v=1.9.1"></script>
 <div class="photo">
   <div class="ui-timeLine">
     <div v-for="item in items" class="item">
@@ -22,7 +23,9 @@ peramlink: 3
         <div class="cbox">
           <div class="title" v-text="item.title"></div>
           <div class="types">
-            <a v-for="imgItem in item.type" :href="`/images${item.imgDate}${imgItem}.jpg`" target="_blank"><img :src="`/images${item.imgDate}${imgItem}.jpg`" alt data-action="zoom"></a>
+            <a v-for="imgItem in item.type" :href="`/images${item.imgDate}${imgItem}.jpg`" target="_blank">
+							<img src="" alt="" :data-src="`/images${item.imgDate}${imgItem}.jpg`" data-action="zoom">
+						</a>
           </div>
         </div>
       </div>
@@ -67,6 +70,45 @@ peramlink: 3
 
 })(jQuery);
 
+</script>
+
+<!-- 
+<script>
+// 一开始没有滚动的时候，出现在视窗中的图片也会加载
+start();
+
+// 当页面开始滚动的时候，遍历图片，如果图片出现在视窗中，就加载图片
+var clock; //函数节流
+$(window).on('scroll',function(){
+  if(clock){
+    clearTimeout(clock);
+  }
+  clock = setTimeout(function(){
+    start()
+  }, 3000)
+})
+
+function start(){
+    $('img').not('[data-isLoading]').each(function () {
+    if (isShow($(this))) {
+      loadImg($(this));
+    }
+  })
+}
+
+// 判断图片是否出现在视窗的函数
+function isShow($node){
+  return $node.offset().top <= $(window).height()+$(window).scrollTop();
+}
+
+// 加载图片的函数，就是把自定义属性data-src 存储的真正的图片地址，赋值给src
+function loadImg($img){
+  $img.attr('src', $img.attr('data-src'));
+
+  // 已经加载的图片，我给它设置一个属性，值为1，作为标识
+  // 弄这个的初衷是因为，每次滚动的时候，所有的图片都会遍历一遍，这样有点浪费，所以做个标识，滚动的时候只遍历哪些还没有加载的图片
+  $img.attr('data-isLoading', 1);
+}
 </script>
 
 <script>
@@ -231,6 +273,8 @@ setTimeout(function () {
 
 .types a {
   width: 140px;
+  /* height: 280px; */
+  /* background-color: rgb(0, 200, 255); */
 }
 
 img {
