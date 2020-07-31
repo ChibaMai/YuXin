@@ -6,6 +6,7 @@ window.APlayer = require('aplayer');
 window.DPlayer = require('dplayer');
 
 require('./utils');
+require('./img');
 require('./motion');
 require('./affix');
 require('./pisces')();

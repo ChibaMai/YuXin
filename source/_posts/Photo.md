@@ -72,7 +72,6 @@ peramlink: 3
 
 </script>
 
-<!-- 
 <script>
 // 一开始没有滚动的时候，出现在视窗中的图片也会加载
 start();
