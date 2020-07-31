@@ -345,6 +345,145 @@
   
   <div class="post-date">
 			<div class="post-month">07月</div>
+			<div class="post-day">30</div>
+	</div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yuxin.aftersoil.xyz/SanFengYun/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/YuXin.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hi，语心">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link scaleup" href="/SanFengYun/" itemprop="url">三丰云 免费虚拟主机</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-30T19:52:36+08:00">2020-07-30</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+
+          <!-- 
+          
+          
+             <span id="/SanFengYun/" class="leancloud_visitors" data-flag-title="三丰云 免费虚拟主机">
+               <span class="post-meta-divider">•</span>
+               <span class="post-meta-item-icon">
+                 <i class="far fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">被</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span class="post-meta-item-text">人看爆</span>
+             </span>
+          
+          -->
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+      
+      
+      
+
+      
+        
+          
+            <p>我在这里向大家推荐一款免费建站的服务器 “三丰云”</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://www.sanfengyun.com/" target="_blank" rel="noopener">https://www.sanfengyun.com/</a></p>
+
+            <div class="post-button text-center">
+              <a class="btn scaleup" href="/SanFengYun/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">07月</div>
 			<div class="post-day">28</div>
 	</div>
   
@@ -441,6 +580,7 @@
           
             <p>我的相册，这里是我个人相册存储的地方</p>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script src="http://www.jq22.com/demo/tuupola-jquery_lazyload/jquery.lazyload.js?v=1.9.1"></script>
 <div class="photo">
   <div class="ui-timeLine">
     <div v-for="item in items" class="item">
@@ -451,7 +591,9 @@
         <div class="cbox">
           <div class="title" v-text="item.title"></div>
           <div class="types">
-            <a v-for="imgItem in item.type" :href="`/images${item.imgDate}${imgItem}.jpg`" target="_blank"><img :src="`/images${item.imgDate}${imgItem}.jpg`" alt data-action="zoom"></a>
+            <a v-for="imgItem in item.type" :href="`/images${item.imgDate}${imgItem}.jpg`" target="_blank">
+                            <img src="" alt="" :data-src="`/images${item.imgDate}${imgItem}.jpg`" data-action="zoom">
+                        </a>
           </div>
         </div>
       </div>
@@ -496,6 +638,44 @@
 
 })(jQuery);
 
+</script>
+
+<script>
+// 一开始没有滚动的时候，出现在视窗中的图片也会加载
+start();
+
+// 当页面开始滚动的时候，遍历图片，如果图片出现在视窗中，就加载图片
+var clock; //函数节流
+$(window).on('scroll',function(){
+  if(clock){
+    clearTimeout(clock);
+  }
+  clock = setTimeout(function(){
+    start()
+  }, 3000)
+})
+
+function start(){
+    $('img').not('[data-isLoading]').each(function () {
+    if (isShow($(this))) {
+      loadImg($(this));
+    }
+  })
+}
+
+// 判断图片是否出现在视窗的函数
+function isShow($node){
+  return $node.offset().top <= $(window).height()+$(window).scrollTop();
+}
+
+// 加载图片的函数，就是把自定义属性data-src 存储的真正的图片地址，赋值给src
+function loadImg($img){
+  $img.attr('src', $img.attr('data-src'));
+
+  // 已经加载的图片，我给它设置一个属性，值为1，作为标识
+  // 弄这个的初衷是因为，每次滚动的时候，所有的图片都会遍历一遍，这样有点浪费，所以做个标识，滚动的时候只遍历哪些还没有加载的图片
+  $img.attr('data-isLoading', 1);
+}
 </script>
 
 <script>
@@ -660,6 +840,8 @@ setTimeout(function () {
 
 .types a {
   width: 140px;
+  /* height: 280px; */
+  /* background-color: rgb(0, 200, 255); */
 }
 
 img {
